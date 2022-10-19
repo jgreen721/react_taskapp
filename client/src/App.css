@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.app {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login-app {
+  height: 100%;
+  width: 100%;
+  /* padding: 2em; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background: linear-gradient(to right, lightblue, limegreen);
+}
+.login-header {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.login-card {
+  /* padding: 3em; */
+  width: clamp(50%, 400px, 85%);
+  /* border: 2px solid red; */
+  margin: 0 auto;
+  text-align: center;
+  background: whitesmoke;
+  box-shadow: 2px 3px 15px gray;
+  border-radius: 15%;
+  border-bottom-left-radius: 0%;
+}
+
+.login-error {
+  color: red;
+  font-weight: 800;
+}
+
+.form-div {
+  padding: 2em;
+}
+
+.form-div {
+  padding: 2em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.login-btn {
+  width: 100px;
+  padding: 0.5em;
+  background: black;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  box-shadow: 3px 5px 10px black;
+  opacity: 60%;
+}
+
+/*Dashboard */
+
+.dashboard-app {
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(lemonchiffon, rebeccapurple);
+  opacity: 35%;
+  pointer-events: none;
+}
+
+.dash-header {
+  padding: 1.25em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.signout-icon {
+  position: absolute;
+  right: 3.5em;
+  top: 1.5em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signout-icon:hover {
+  transform: rotate(-45deg);
+}
+
+.signout-icon:hover::after {
+  content: "Login";
+  position: absolute;
+}
+
+.dash-task-container {
+  width: 100%;
+  overflow: auto;
+  height: 70%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dash-footer {
+  padding: 1em;
+}
+
+.tasks-list {
+  padding: 1em;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+  z-index: 5;
+  position: relative;
+  text-shadow: 2px 1px 4px white;
+  background: linear-gradient(to right, rgb(71, 62, 62), white);
+  margin: 1.25em;
+  border-top-left-radius: 30%;
+  box-shadow: 2px 4px 5px gray;
+  /* border-bottom-left-radius: 40%; */
+}
+
+.edit-btn,
+.remove-btn {
+  margin: 1em;
+  /* width: 65px; */
+  height: 35px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  background: skyblue;
+  padding: 0 1em;
+  border: none;
+  font-weight: 700;
+}
+
+.remove-btn {
+  background: rgb(241, 63, 63);
+}
+
+.edit-btn:hover {
+  box-shadow: 2px 5px 8px gray;
+}
+
+.remove-btn:hover {
+  box-shadow: 10px 2px 5px red;
+  color: white;
+}
+
+.undo {
+  background: rgb(10, 241, 10);
+}
+
+.add-task-row {
+  padding: 1em;
+}
+
+.add-task-flex {
+  display: flex;
+  width: 100%;
+  /* border: 2px solid black; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-btn {
+  width: 125px;
+  height: 30px;
+  transform: translateY(0.5rem);
+}
+
+.number-input {
+  position: relative;
+}
+
+/* .number-input::after {
+  position: absolute;
+  height: 100px;
+  width: 175px;
+  font-size: 1.5rem;
+  background: orange;
+  content: attr(data-number);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 100%;
+  pointer-events: none;
+} */
+
+@media screen and (max-width: 650px) {
+  .task-item {
+    padding: 0.5em;
+    flex-direction: column;
+    border-top-left-radius: 15%;
+  }
+
+  .task-item h3 {
+    font-size: 1rem;
+  }
+
+  /* .btn-row {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  } */
+  .dash-h1 {
+    font-size: 1.5rem;
+  }
+
+  .dash-h4 {
+    font-size: 0.75rem;
+  }
+}
